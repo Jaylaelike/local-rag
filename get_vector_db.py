@@ -4,7 +4,7 @@ from langchain_community.vectorstores.chroma import Chroma
 
 CHROMA_PATH = os.getenv('CHROMA_PATH', 'chroma')
 COLLECTION_NAME = os.getenv('COLLECTION_NAME', 'local-rag')
-TEXT_EMBEDDING_MODEL = os.getenv('TEXT_EMBEDDING_MODEL', 'nomic-embed-text')
+TEXT_EMBEDDING_MODEL = os.getenv('TEXT_EMBEDDING_MODEL', 'all-minilm:33m-l12-v2-fp16')
 
 def get_vector_db():
     embedding = OllamaEmbeddings(model=TEXT_EMBEDDING_MODEL,show_progress=True)
